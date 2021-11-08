@@ -1,0 +1,29 @@
+{
+  "name": "api-marketplace-yaydoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.13",
+    "objection": "^2.2.18",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "seed": "npx knex seed:run dev --knexfile knexfile.js",
+    "make-seed": "npx knex seed:make dev --knexfile knexfile.js",
+    "migrate": "npx knex migrate:latest --knexfile knexfile.js",
+    "down": "npx knex migrate:down --knexfile knexfile.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
