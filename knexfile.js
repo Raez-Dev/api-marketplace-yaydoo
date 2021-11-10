@@ -26,4 +26,27 @@ module.exports = {
     },
     ...knexSnakeCaseMappers, // To format
   },
+  production: {
+    client: 'postgresql',
+    connection: {
+      host: config.dbHost,
+      port: config.port,
+      database: config.dbDatabase,
+      user: config.dbUser,
+      password: config.password,
+    },
+    pool: {
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: './src/db/migrations',
+    },
+    seeds: {
+      // Initial data
+      directory: './src/db/seeds',
+    },
+    ...knexSnakeCaseMappers, // To format
+  },
 };
