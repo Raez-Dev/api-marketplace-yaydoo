@@ -8,7 +8,7 @@ const config = {
   dbUser : process.env.DB_USER,
   dbPort : process.env.DB_PORT,
   dbPassword : process.env.DB_PASSWORD,
-  port: process.env.APP_PORT ? parseInt(process.env.APP_PORT, 10) : 5000,
+  port: process.env.PORT ? parseInt(process.env.PORT) : 5000,
 };
 
 module.exports = config;
