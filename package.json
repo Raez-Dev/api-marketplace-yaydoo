@@ -23,6 +23,7 @@
     "down": "npx knex migrate:down --knexfile knexfile.js",
     "dev": "nodemon src/index.js",
     "heroku-postbuild": "npm run build",
+    "start":"node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
