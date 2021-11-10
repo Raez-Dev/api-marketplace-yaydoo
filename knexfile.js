@@ -28,7 +28,14 @@ module.exports = {
   },
   production: {
     client: 'postgresql',
-    connection: { ...config.dbUrl, ssl:true},
+    connection: {
+      host: config.dbHost,
+      port: config.port,
+      database: config.dbDatabase,
+      user: config.dbUser,
+      password: config.password,
+      ssl: true,
+    },
     pool: {
       min: 2,
       max: 10,
